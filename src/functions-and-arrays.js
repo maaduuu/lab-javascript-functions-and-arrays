@@ -125,16 +125,36 @@ function uniquifyArray(array) {
       }
   });
   return uniqueArray;
-  
+
 }
+
+
+// Unique Arrays V2
+
+const uniquifyArray2 = (words) => {
+  let uniqueArray = [];
+  for (let index of words){
+    if (!uniqueArray.includes (index)) uniqueArray.push(index);
+  }
+  return uniqueArray;
+
+};
 
 
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() {}
+function doesWordExist(array, word) {
+if (array.includes(word)){
+  return true;
 
+} else {
+  return false;
+
+}
+}
+console.log (`Contiene esta palabra? ${doesWordExist(wordsFind, "subset")}`);
 
 
 // Iteration #7: Count repetition
@@ -152,7 +172,8 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+function howManyTimes(array, word) {}
+  
 
 
 
@@ -200,5 +221,5 @@ if (typeof module !== 'undefined') {
     doesWordExist,
     howManyTimes,
     greatestProduct
-  };
+  }
 }
